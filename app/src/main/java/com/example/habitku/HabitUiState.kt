@@ -1,8 +1,7 @@
 package com.example.habitku
 
-/**
- * Data class untuk merepresentasikan state UI pada layar Habit.
- * Menyimpan seluruh data yang dibutuhkan oleh UI untuk dirender.
+/**Data class untuk merepresentasikan state UI pada layar Habit.
+Menyimpan seluruh data yang dibutuhkan oleh UI untuk dirender.
  */
 data class HabitUiState(
     val habits: List<Habit> = emptyList(), // Daftar seluruh kebiasaan yang tersimpan

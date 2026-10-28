@@ -7,9 +7,8 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import java.util.UUID
 
-/**
- * ViewModel untuk mengelola state dan business logic dari aplikasi HabitKu.
- * Mewarisi [ViewModel] agar state tetap terjaga saat terjadi perubahan konfigurasi (seperti rotasi layar).
+/**ViewModel untuk mengelola state dan business logic dari aplikasi HabitKu.
+ Mewarisi [ViewModel] agar state tetap terjaga saat terjadi perubahan konfigurasi (seperti rotasi layar).
  */
 class HabitViewModel : ViewModel() {
 
@@ -19,20 +18,16 @@ class HabitViewModel : ViewModel() {
     // StateFlow publik (read-only) yang diobservasi oleh UI (Composable)
     val uiState: StateFlow<HabitUiState> = _uiState.asStateFlow()
 
-    /**
-     * Dipanggil ketika teks nama kebiasaan pada input berubah.
-     * Memperbarui nilai draftName dan menghapus pesan error jika ada.
-     */
+    /** Dipanggil ketika teks nama kebiasaan pada input berubah.
+    Memperbarui nilai draftName dan menghapus pesan error jika ada.*/
     fun onDraftNameChanged(newName: String) {
         _uiState.update { current ->
             current.copy(draftName = newName, inputError = null)
         }
     }
 
-    /**
-     * Dipanggil ketika pengguna ingin menambahkan kebiasaan baru.
-     * Melakukan validasi input (tidak boleh kosong) dan membuat objek [Habit] baru.
-     */
+    /**Dipanggil ketika pengguna ingin menambahkan kebiasaan baru.
+      Melakukan validasi input (tidak boleh kosong) dan membuat objek [Habit] baru.*/
     fun onAddHabit() {
         _uiState.update { current ->
             val name = current.draftName.trim()
@@ -53,8 +48,7 @@ class HabitViewModel : ViewModel() {
     }
 
     /**
-     * Dipanggil ketika status centang (selesai/belum) pada suatu kebiasaan diubah.
-     */
+    Dipanggil ketika status centang (selesai/belum) pada suatu kebiasaan diubah */
     fun onHabitCompletionChanged(id: String, isCompleted: Boolean) {
         _uiState.update { current ->
             current.copy(
@@ -66,8 +60,7 @@ class HabitViewModel : ViewModel() {
     }
 
     /**
-     * Dipanggil untuk menghapus kebiasaan berdasarkan ID-nya.
-     */
+    Dipanggil untuk menghapus kebiasaan berdasarkan ID-nya.*/
     fun onDeleteHabit(id: String) {
         _uiState.update { current ->
             current.copy(

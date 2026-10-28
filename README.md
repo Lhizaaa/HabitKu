@@ -38,16 +38,6 @@ Aplikasi Android sederhana berbasis **Jetpack Compose** dengan arsitektur **MVVM
 
 Aplikasi ini menerapkan alur data satu arah (UDF) secara ketat pada setiap interaksi pengguna:
 
-```text
-[ UI Layer (HabitScreen) ]  --- (1) User Event: onAddHabit() ---> [ HabitViewModel ]
-▲                                                                     │
-│                                                            (2) Proses Logika &
-│                                                                Validasi Input
-│                                                                     │
-(4) Recomposition /                                                   ▼
-Pembaruan Tampilan    <--- (3) Emit State Baru (StateFlow) --- [ HabitUiState ]
-```
-
 <p align="center">
   <img src="./screenshots/udf.png" alt="Diagram UDF" width="600" />
 </p>
@@ -67,3 +57,7 @@ Pembaruan Tampilan    <--- (3) Emit State Baru (StateFlow) --- [ HabitUiState ]
 | <img src="./screenshots/compact_layout.png" alt="Layar Sempit" width="300" /> | <img src="./screenshots/wide_layout.png" alt="Layar Lebar" width="550" /> |
 
 ---
+
+## Slide Presentasi
+
+**[https://docs.google.com/presentation/d/1ihua5Gq5q9aizkpH7C24s4Fy45bV3sN8_QknOrAADqo/edit?usp=sharing]**

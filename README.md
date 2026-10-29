@@ -58,6 +58,6 @@ Aplikasi ini menerapkan alur data satu arah (UDF) secara ketat pada setiap inter
 
 ---
 
-## Slide Presentasi
+## Slide
 
 **[https://docs.google.com/presentation/d/1ihua5Gq5q9aizkpH7C24s4Fy45bV3sN8_QknOrAADqo/edit?usp=sharing]**

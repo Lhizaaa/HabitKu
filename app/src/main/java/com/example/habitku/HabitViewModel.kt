@@ -7,8 +7,8 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import java.util.UUID
 
-/**ViewModel untuk mengelola state dan business logic dari aplikasi HabitKu.
- Mewarisi [ViewModel] agar state tetap terjaga saat terjadi perubahan konfigurasi (seperti rotasi layar).
+/**ViewModel untuk mengelola state dan business logic dari aplikasi.
+ Mewarisi [ViewModel] agar state tetap terjaga saat terjadi perubahan konfigurasi.
  */
 class HabitViewModel : ViewModel() {
 

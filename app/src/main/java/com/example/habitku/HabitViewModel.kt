@@ -59,8 +59,7 @@ class HabitViewModel : ViewModel() {
         }
     }
 
-    /**
-    Dipanggil untuk menghapus kebiasaan berdasarkan ID-nya.*/
+    /** Dipanggil untuk menghapus kebiasaan berdasarkan ID-nya.*/
     fun onDeleteHabit(id: String) {
         _uiState.update { current ->
             current.copy(
